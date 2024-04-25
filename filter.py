@@ -14,7 +14,7 @@ def filter_cmd(cmd: str,apps):
         return cmd
 
 def filter_firstPart(firstPart:str):
-    comands = ["open","close","list"]
+    comands = ["open","close","list","joke","help"]
     metrix= Damerau()
     setter = dict()
     for el in comands:
