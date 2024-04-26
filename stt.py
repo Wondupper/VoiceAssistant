@@ -19,6 +19,7 @@ def va_listen(callback):
         while True:
             data = q.get()
             if rec.AcceptWaveform(data):
+                print("!")
                 cmd = str(json.loads(rec.Result())["text"])
                 if cmd.startswith("stop")==True:
                     return

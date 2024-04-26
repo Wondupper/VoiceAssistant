@@ -26,3 +26,4 @@ def va_speak(what: str):
     sd.play(audio, sample_rate * 1.05)
     time.sleep((len(audio) / sample_rate) + 0.5)
     sd.stop()
+    print("Говорите")
