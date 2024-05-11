@@ -11,9 +11,7 @@ from num2t4ru import num2text
 apps = list(DetApps.give_appnames(upper=False))
 
 def va_respond(voice: str):
-    print("Услышал:  "+voice)
     cmd = filter.filter_cmd(voice,apps)
-    print("Результат обработки:  "+cmd)
     if cmd != None:
         if cmd.startswith("help") ==True:
             text = "Я умею: ..."
@@ -36,5 +34,5 @@ def va_respond(voice: str):
         tts.va_speak("Команда не распознана")
 
 
-print("Говорите")
+tts.va_speak("Слушаю вашу команду повелитель")
 stt.va_listen(va_respond)
